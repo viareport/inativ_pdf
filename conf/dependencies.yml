@@ -1,4 +1,4 @@
-self: play -> inativPdf 0.9
+self: inativ -> inativPdf 0.9.1
 
 require:
     - play 1.2.4

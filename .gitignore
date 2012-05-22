@@ -1,4 +1,4 @@
 *.pyc
 dist/*
 tmp/*
-lib/play-pdf.jar
+lib/*.jar

@@ -1,4 +1,47 @@
-self: inativ -> inativ_pdf 0.9.1
+self: inativ -> inativ_pdf 0.9.2
 
 require:
     - play 1.2.4.1-viareport
+    - com.lowagie -> itext 2.1.7
+    - jaxen -> jaxen 1.1.1
+    - jtidy -> jtidy 0.0.1
+    - shani_parser -> shani_parser 1.4.17
+    - xml_apis -> xml_apis_xerces 2.9.1
+    - xml_apis -> xml_apis 0.1
+    - yahp -> yahp 0.1
+    - yahp -> yahp_internal 0.1
+    - core_renderer -> core_renderer 0.1
+    - core_renderer -> core_renderer_minimal 0.1
+
+repositories:
+    - inativ:
+        type: chain
+        using:
+             - inativLocal:
+                 type: local
+                 descriptor: ${application.path}/../repository/[module]/[revision]/dependencies.yml
+                 artifact : ${application.path}/../repository/[module]/[revision]/[module]-[revision].zip
+             - inativCentral:
+                 type: http
+                 descriptor: "http://devtoulouse.viareportdomain.com/repository/[module]/[revision]/dependencies.yml"
+                 artifact:  "http://devtoulouse.viareportdomain.com/repository/[module]/[revision]/[module]-[revision].zip" 
+        contains:
+             - inativ -> *
+             - greenscript -> *
+             - cobertura -> *
+    - inativMaven:
+        type: iBiblio
+        root: http://devtoulouse.viareportdomain.com/mvn_repository/
+        contains:
+            - com.ibm.icu -> icu4j
+            - net.sf.opencsv -> opencsv
+            - joda-time -> joda-time-hibernate
+            - com.unboundid -> unboundid-ldapsdk
+            - com.yammer.metrics -> metrics-core
+            - com.lowagie -> itext
+            - jaxen -> jaxen
+            - jtidy -> jtidy
+            - shani_parser -> shani_parser
+            - xml_apis -> *
+            - yahp -> *
+            - core_renderer -> *

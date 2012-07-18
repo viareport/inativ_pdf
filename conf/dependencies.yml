@@ -1,4 +1,4 @@
-self: inativ -> inativ_pdf 0.9.3-1
+self: inativ -> inativ_pdf 0.9.3-2
 
 require:
     - play 1.2.5-viareport

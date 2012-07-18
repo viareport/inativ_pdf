@@ -28,7 +28,7 @@
                 <include name="**/play.static" />
             </fileset>
         </copy>
-        <jar destfile="lib/play-pdf.jar" basedir="tmp/classes">
+        <jar destfile="lib/play-inativ_pdf.jar" basedir="tmp/classes">
             <manifest>
                 <section name="Play">
                     <attribute name="Specification-Title" value="PDF module" />

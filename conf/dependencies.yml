@@ -37,7 +37,7 @@ repositories:
             - net.sf.opencsv -> opencsv
             - joda-time -> joda-time-hibernate
             - com.unboundid -> unboundid-ldapsdk
-            - com.yammer.metrics -> metrics-core
+            - com.yammer.metrics 
             - com.lowagie -> itext
             - jaxen -> jaxen
             - jtidy -> jtidy

@@ -2,3 +2,7 @@
 dist/*
 tmp/*
 lib/*.jar
+.classpath
+.project
+.settings/*
+eclipse/*
